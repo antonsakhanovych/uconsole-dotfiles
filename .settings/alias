@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# eza aliases
+alias ls='eza -al --color=always --group-directories-first' # my preferred listing
+alias la='eza -a --color=always --group-directories-first'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first'  # long format
+alias lt='eza -aT --color=always --group-directories-first' # tree listing
+
+# Shutdown aliases
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
+alias zzz='systemctl suspend'
+alias ZZZ='systemctl hibernate'
+
+# fzf aliases
+alias fzview='fzf -m --preview="bat --color=always {}"'
+alias fzmod='vim $(fzview)'
+
+# aliases for other progs
+alias cat='bat -p --paging=never'
+
+# cd aliases
+alias ..="cd .."
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
+
+# ssh aliases
+alias gbox="ssh -p 2222 antosakh@box.gavindhondt.com"
+
+# git aliases
+alias git-cleanup="git branch -vv | grep ': gone]'|  grep -v "\*" | awk '{ print $1; }' | xargs -r git branch -d"
+# other aliases 
+# alias vim='nvim'
+alias openfile="xdg-open"
+# enable autocd
+shopt -s autocd
+# enable patterns
+shopt -s extglob

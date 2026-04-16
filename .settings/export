@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR=~/repos/scripts/src
+BIN_DIR=~/bin
+LOCAL_BIN_DIR=~/.local/bin
+export PATH=$LOCAL_BIN_DIR:$BIN_DIR:$SCRIPT_DIR:$PATH
+
+export GPG_TTY=$(tty)
+
