@@ -10,4 +10,4 @@ fi
 # Source everything only export file
 . ~/.settings/export
 
-alias s='dbus-run-session sway'
+[ "$(tty)" = "/dev/tty1" ] && exec dbus-run-session sway
