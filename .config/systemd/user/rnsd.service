@@ -1,6 +1,6 @@
 [Unit]
 Description=Reticulum Network Stack
-After=network.target
+After=network-online.target
 
 [Service]
 Type=simple
@@ -11,4 +11,4 @@ StandardOutput=journal
 StandardError=journal
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
