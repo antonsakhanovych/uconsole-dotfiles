@@ -16,7 +16,9 @@ alias fzview='fzf -m --preview="bat --color=always {}"'
 alias fzmod='vim $(fzview)'
 
 # aliases for other progs
-alias cat='bat -p --paging=never'
+alias cat='batcat -p --paging=never'
+alias gpsen='pinctrl set 27 op dh'
+alias gpsdis='pinctrl set 27 op dl'
 
 # cd aliases
 alias ..="cd .."
